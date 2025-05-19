@@ -1,37 +1,322 @@
-<div class="productos">
-    <!-- Pistachos sin cáscara -->
-    <div class="producto">
-        <img src="pistachos_sin_cascara.jpeg" alt="Pistachos sin cáscara en Rosario">
-        <div class="producto-info">
-            <h3>Pistachos sin cáscara</h3>
-            <p>Pistachos premium ya pelados, listos para consumir.</p>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pistachos Rosario | Venta Mayorista y Minorista | Envíos</title>
+    <meta name="description" content="✅ Proveedor directo de pistachos en Rosario. Calidad premium, precios competitivos. Venta por mayor y menor. WhatsApp: 0346 262-6334">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #4CAF50;
+            --primary-dark: #388E3C;
+            --whatsapp: #25D366;
+            --text: #333333;
+            --light-bg: #f8f9fa;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            background: var(--light-bg);
+        }
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 2.5rem 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+        h2 {
+            color: var(--primary-dark);
+            font-size: 2rem;
+            margin: 2rem 0 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: var(--primary);
+        }
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('pistachos-con-cascara.jpg') center/cover;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+        .hero-content {
+            max-width: 800px;
+            padding: 2rem;
+        }
+        .hero h2 {
+            color: white;
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+        .hero h2:after {
+            background: white;
+            margin: 0 auto;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+        }
+        .product-img-container {
+            height: 250px;
+            overflow: hidden;
+        }
+        .product-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        .product-card:hover .product-img {
+            transform: scale(1.05);
+        }
+        .product-info {
+            padding: 1.5rem;
+        }
+        .product-title {
+            color: var(--primary-dark);
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+        }
+        .contact-section {
+            background: white;
+            padding: 3rem 2rem;
+            border-radius: 10px;
+            margin: 4rem 0;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--whatsapp);
+            color: white;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 1.5rem 0;
+            transition: all 0.3s;
+        }
+        .whatsapp-btn:hover {
+            background: #128C7E;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(18, 140, 126, 0.3);
+        }
+        .whatsapp-btn i {
+            margin-right: 10px;
+            font-size: 1.4rem;
+        }
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 3rem 0;
+        }
+        .benefit-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+        .benefit-card i {
+            color: var(--primary);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--whatsapp);
+            color: white;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.3);
+            z-index: 100;
+            transition: all 0.3s;
+            animation: pulse 1.5s infinite;
+        }
+        .floating-whatsapp:hover {
+            transform: scale(1.1);
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        footer {
+            background: #222;
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            margin-top: 4rem;
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .hero { height: 300px; }
+            .hero h2 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Pistachos Rosario</h1>
+            <p class="tagline">Calidad premium · Precios directos de productor</p>
         </div>
-    </div>
-    
-    <!-- Pistachos con cáscara -->
-    <div class="producto">
-        <img src="pistachos-con-cascara.jpg" alt="Pistachos con cáscara en Rosario">
-        <div class="producto-info">
-            <h3>Pistachos con cáscara</h3>
-            <p>Naturales con cáscara, conservan todo su sabor.</p>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Proveedor directo en Rosario</h2>
+                <p style="font-size: 1.2rem;">Pistachos argentinos de primera calidad al mejor precio del mercado</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Nuestros Productos</h2>
+            <p>Ofrecemos los mejores frutos secos seleccionados cuidadosamente para garantizar su frescura y sabor.</p>
+            
+            <div class="product-grid">
+                <article class="product-card">
+                    <div class="product-img-container">
+                        <img src="pistachos_sin_cascara.jpeg" alt="Pistachos pelados premium en Rosario" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Pistachos sin cáscara</h3>
+                        <p>Pistachos premium ya pelados, listos para consumir. Ideal para repostería, snacks o consumo directo.</p>
+                    </div>
+                </article>
+                
+                <article class="product-card">
+                    <div class="product-img-container">
+                        <img src="pistachos-con-cascara.jpg" alt="Comprar pistachos con cáscara en Rosario" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Pistachos con cáscara</h3>
+                        <p>Pistachos naturales con cáscara, conservando todo su sabor y propiedades nutricionales.</p>
+                    </div>
+                </article>
+                
+                <article class="product-card">
+                    <div class="product-img-container">
+                        <img src="almendras.jpeg" alt="Almendras premium en Rosario - Venta por mayor" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Almendras</h3>
+                        <p>Almendras seleccionadas, disponibles con o sin piel. Rica fuente de nutrientes y energía.</p>
+                    </div>
+                </article>
+                
+                <article class="product-card">
+                    <div class="product-img-container">
+                        <img src="nueces.jpeg" alt="Nueces de calidad en Rosario - Mejor precio" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Nueces</h3>
+                        <p>Nueces premium, mitades y piezas enteras. Perfectas para ensaladas, repostería o consumo directo.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="benefits">
+            <div class="benefit-card">
+                <i class="fas fa-award"></i>
+                <h3>Calidad Premium</h3>
+                <p>Productos seleccionados cuidadosamente para garantizar la mejor calidad</p>
+            </div>
+            <div class="benefit-card">
+                <i class="fas fa-tags"></i>
+                <h3>Precios Directos</h3>
+                <p>Sin intermediarios, precios competitivos para mayoristas y minoristas</p>
+            </div>
+            <div class="benefit-card">
+                <i class="fas fa-truck"></i>
+                <h3>Envíos Rápidos</h3>
+                <p>Entregamos en Rosario y zona metropolitana</p>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <h2>¿Listo para hacer tu pedido?</h2>
+            <p>Contactanos directamente por WhatsApp para consultar disponibilidad y precios:</p>
+            <a href="https://wa.me/543462626334?text=Hola,%20estoy%20interesado%20en%20los%20pistachos" class="whatsapp-btn">
+                <i class="fab fa-whatsapp"></i> WhatsApp: 0346 262-6334
+            </a>
+            <p>Horario de atención: Lunes a Sábado de 9:00 a 18:00 hs</p>
+        </section>
+    </main>
+
+    <a href="https://wa.me/543462626334?text=Hola,%20estoy%20interesado%20en%20los%20pistachos" class="floating-whatsapp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Pistachos Rosario - Venta directa de frutos secos</p>
+            <p style="margin-top: 1rem; opacity: 0.8;">Rosario, Santa Fe, Argentina</p>
         </div>
-    </div>
-    
-    <!-- Almendras -->
-    <div class="producto">
-        <img src="almendras.jpeg" alt="Almendras en Rosario">
-        <div class="producto-info">
-            <h3>Almendras</h3>
-            <p>Seleccionadas, con o sin piel.</p>
-        </div>
-    </div>
-    
-    <!-- Nueces -->
-    <div class="producto">
-        <img src="nueces.jpeg" alt="Nueces en Rosario">
-        <div class="producto-info">
-            <h3>Nueces</h3>
-            <p>Mitades y piezas enteras de primera calidad.</p>
-        </div>
-    </div>
-</div>
+    </footer>
+</body>
+</html>
