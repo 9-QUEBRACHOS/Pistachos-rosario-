@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="psQtKScHcsnVJVcfp5Y4paMsfjuSoGyOErZypoyDfpQ" />
     <title>Pistachos Rosario | 9Q Frutos Secos - Tienda Online</title>
-    <meta name="description" content="Pistachos tostados y salados de calidad premium en Rosario. Pedí online para entrega a domicilio o consultá precios mayoristas directos.">
+    <meta name="description" content="Pistachos tostados y salados de calidad premium en Rosario. Pedí online para entrega a domicilio o consultá precios mayoristas directos de productor.">
     
     <!-- Open Graph -->
     <meta property="og:type" content="website">
@@ -65,6 +65,12 @@
             color: #ffffff;
             border-color: #2d7a36;
         }
+        .hero-minorista-bg {
+            background: linear-gradient(rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.94)), url('bg-pistachos-cascara.png') center/cover;
+        }
+        .hero-mayorista-bg {
+            background: linear-gradient(rgba(24, 70, 30, 0.85), rgba(15, 45, 20, 0.90)), url('bg-campo-pistachos.png') center/cover;
+        }
     </style>
 </head>
 <body class="bg-white text-brand-dark antialiased min-h-screen flex flex-col selection:bg-brand-green selection:text-white">
@@ -78,7 +84,7 @@
         </div>
     </div>
 
-    <!-- MAIN NAVBAR (Tiendanube / Clean E-commerce style) -->
+    <!-- MAIN NAVBAR -->
     <header class="sticky top-0 z-40 bg-white border-b border-gray-200 shadow-xs">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between gap-4">
             
@@ -97,7 +103,7 @@
                     <i class="fa-solid fa-cart-shopping"></i> Venta Minorista (Rosario)
                 </button>
                 <button onclick="switchTab('mayorista')" id="nav-btn-mayorista" class="tab-btn px-5 py-2 rounded-lg text-xs font-bold text-gray-600 hover:text-gray-900 transition flex items-center gap-2">
-                    <i class="fa-solid fa-boxes-stacked"></i> Venta Mayorista (+5kg)
+                    <i class="fa-solid fa-boxes-stacked"></i> Venta Mayorista
                 </button>
             </div>
 
@@ -118,22 +124,22 @@
                     🛒 Minorista (Rosario)
                 </button>
                 <button onclick="switchTab('mayorista')" id="mob-nav-btn-mayorista" class="tab-btn py-2 text-xs font-bold text-gray-700 rounded-lg transition text-center">
-                    📦 Mayorista (País)
+                    📦 Venta Mayorista
                 </button>
             </div>
         </div>
     </header>
 
-    <!-- STORE BANNER (Clean & Fresh) -->
-    <section class="bg-gradient-to-b from-brand-greenLight to-white py-8 sm:py-12 border-b border-gray-100">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center space-y-3">
-            <span class="inline-flex items-center gap-1.5 bg-white border border-brand-greenBorder text-brand-green px-3 py-1 rounded-full text-xs font-bold shadow-xs">
+    <!-- STORE BANNER (WITH SUBTLE TEXTURED BACKGROUND) -->
+    <section id="hero-banner-section" class="hero-minorista-bg py-10 sm:py-14 border-b border-gray-200 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center space-y-3.5">
+            <span id="hero-badge" class="inline-flex items-center gap-1.5 bg-white/95 backdrop-blur-xs border border-brand-greenBorder text-brand-green px-3.5 py-1 rounded-full text-xs font-bold shadow-xs">
                 <i class="fa-solid fa-circle-check text-brand-green"></i> 100% Calidad Argentina · Cosecha Seleccionada
             </span>
-            <h1 id="hero-title" class="text-2xl sm:text-4xl font-extrabold text-gray-900 tracking-tight">
+            <h1 id="hero-title" class="text-2xl sm:text-4xl font-extrabold text-gray-900 tracking-tight leading-tight">
                 Pistachos Tostados y Salados de Calidad Premium
             </h1>
-            <p id="hero-subtitle" class="text-gray-600 text-sm sm:text-base max-w-xl mx-auto">
+            <p id="hero-subtitle" class="text-gray-700 text-sm sm:text-base max-w-xl mx-auto font-medium">
                 Elegí tus productos, sumalos al carrito y recibilos en tu casa en Rosario coordinando tu entrega directa por WhatsApp.
             </p>
         </div>
@@ -164,30 +170,30 @@
                 </div>
             </div>
 
-            <!-- Product Grid (Tiendanube clean style) -->
+            <!-- Product Grid -->
             <div>
                 <div class="border-b border-gray-200 pb-3 mb-6 flex items-center justify-between">
                     <h3 class="font-extrabold text-xl text-gray-900 flex items-center gap-2">
                         <span>Pistachos Seleccionados</span>
-                        <span class="text-xs font-semibold bg-gray-100 text-gray-700 px-2.5 py-0.5 rounded-md">2 presentaciones</span>
+                        <span class="text-xs font-semibold bg-gray-100 text-gray-700 px-2.5 py-0.5 rounded-md">3 presentaciones</span>
                     </h3>
                 </div>
 
-                <div class="grid sm:grid-cols-2 gap-6 sm:gap-8 max-w-3xl mx-auto">
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     
                     <!-- PRODUCTO 1: 180g Caja PET -->
                     <article class="store-card bg-white rounded-2xl border border-gray-200 overflow-hidden flex flex-col justify-between shadow-xs">
-                        <div class="p-6 bg-white flex flex-col items-center justify-center border-b border-gray-100 relative min-h-[280px]">
+                        <div class="p-6 bg-white flex flex-col items-center justify-center border-b border-gray-100 relative min-h-[260px]">
                             <span class="absolute top-3 left-3 bg-brand-green text-white text-[11px] font-bold px-2.5 py-1 rounded-md">
                                 Caja PET 180g
                             </span>
-                            <img src="pistachos-180g-pet.png" alt="Pistachos 180g Caja PET Rosario" class="h-48 sm:h-52 object-contain" onerror="this.src='images/pistachos-180g-pet.png'">
+                            <img src="pistachos-180g-pet.png" alt="Pistachos 180g Caja PET Rosario" class="h-44 sm:h-48 object-contain" onerror="this.src='images/pistachos-180g-pet.png'">
                         </div>
 
-                        <div class="p-5 sm:p-6 space-y-4 flex-grow flex flex-col justify-between">
+                        <div class="p-5 space-y-4 flex-grow flex flex-col justify-between">
                             <div>
                                 <span class="text-[11px] font-bold text-brand-green uppercase tracking-wider">9Q Frutos Secos</span>
-                                <h4 class="font-bold text-gray-900 text-lg sm:text-xl mt-0.5 leading-snug">
+                                <h4 class="font-bold text-gray-900 text-base sm:text-lg mt-0.5 leading-snug">
                                     Pistachos Tostados y Salados - 180g
                                 </h4>
                                 <p class="text-gray-500 text-xs mt-1.5 leading-relaxed">
@@ -198,19 +204,17 @@
                             <div class="pt-3 border-t border-gray-100">
                                 <div class="mb-3 flex items-baseline justify-between">
                                     <span class="text-xs font-semibold text-gray-500">Precio:</span>
-                                    <span class="text-2xl sm:text-3xl font-extrabold text-gray-900">$10.000</span>
+                                    <span class="text-2xl font-extrabold text-gray-900">$10.000</span>
                                 </div>
 
                                 <div class="flex items-center gap-2">
-                                    <!-- Qty -->
                                     <div class="flex items-center border border-gray-300 rounded-lg bg-gray-50 overflow-hidden">
-                                        <button onclick="decrementQty('qty-p1')" class="px-2.5 py-2 text-gray-600 hover:bg-gray-200 font-bold text-sm">-</button>
-                                        <input type="number" id="qty-p1" value="1" min="1" max="99" class="w-10 text-center bg-transparent font-bold text-gray-900 text-xs focus:outline-none">
-                                        <button onclick="incrementQty('qty-p1')" class="px-2.5 py-2 text-gray-600 hover:bg-gray-200 font-bold text-sm">+</button>
+                                        <button onclick="decrementQty('qty-p1')" class="px-2 py-1.5 text-gray-600 hover:bg-gray-200 font-bold text-sm">-</button>
+                                        <input type="number" id="qty-p1" value="1" min="1" max="99" class="w-8 text-center bg-transparent font-bold text-gray-900 text-xs focus:outline-none">
+                                        <button onclick="incrementQty('qty-p1')" class="px-2 py-1.5 text-gray-600 hover:bg-gray-200 font-bold text-sm">+</button>
                                     </div>
-                                    <!-- Add button -->
-                                    <button onclick="addToCart(1, 'Pistachos Tostados y Salados (180g Caja PET)', 10000, 'qty-p1', 'pistachos-180g-pet.png')" class="flex-grow bg-brand-green hover:bg-brand-greenDark text-white font-bold py-2.5 px-3 rounded-lg text-xs sm:text-sm transition flex items-center justify-center gap-2 shadow-xs active:scale-98">
-                                        <i class="fa-solid fa-cart-plus"></i> Agregar al Carrito
+                                    <button onclick="addToCart(1, 'Pistachos Tostados y Salados (180g Caja PET)', 10000, 'qty-p1', 'pistachos-180g-pet.png')" class="flex-grow bg-brand-green hover:bg-brand-greenDark text-white font-bold py-2.5 px-3 rounded-lg text-xs transition flex items-center justify-center gap-1.5 shadow-xs active:scale-98">
+                                        <i class="fa-solid fa-cart-plus"></i> Agregar
                                     </button>
                                 </div>
                             </div>
@@ -219,20 +223,20 @@
 
                     <!-- PRODUCTO 2: 400g Bolsa Doypack -->
                     <article class="store-card bg-white rounded-2xl border border-gray-200 overflow-hidden flex flex-col justify-between shadow-xs">
-                        <div class="p-6 bg-white flex flex-col items-center justify-center border-b border-gray-100 relative min-h-[280px]">
+                        <div class="p-6 bg-white flex flex-col items-center justify-center border-b border-gray-100 relative min-h-[260px]">
                             <span class="absolute top-3 left-3 bg-brand-greenDark text-white text-[11px] font-bold px-2.5 py-1 rounded-md">
                                 Doypack 400g
                             </span>
                             <span class="absolute top-3 right-3 bg-emerald-100 text-emerald-800 text-[11px] font-bold px-2 py-0.5 rounded">
                                 Más elegido
                             </span>
-                            <img src="pistachos-400g-doypack.png" alt="Pistachos 400g Bolsa Doypack Rosario" class="h-48 sm:h-52 object-contain" onerror="this.src='images/pistachos-400g-doypack.png'">
+                            <img src="pistachos-400g-doypack.png" alt="Pistachos 400g Bolsa Doypack Rosario" class="h-44 sm:h-48 object-contain" onerror="this.src='images/pistachos-400g-doypack.png'">
                         </div>
 
-                        <div class="p-5 sm:p-6 space-y-4 flex-grow flex flex-col justify-between">
+                        <div class="p-5 space-y-4 flex-grow flex flex-col justify-between">
                             <div>
                                 <span class="text-[11px] font-bold text-brand-green uppercase tracking-wider">9Q Frutos Secos</span>
-                                <h4 class="font-bold text-gray-900 text-lg sm:text-xl mt-0.5 leading-snug">
+                                <h4 class="font-bold text-gray-900 text-base sm:text-lg mt-0.5 leading-snug">
                                     Pistachos Tostados y Salados - 400g
                                 </h4>
                                 <p class="text-gray-500 text-xs mt-1.5 leading-relaxed">
@@ -243,19 +247,60 @@
                             <div class="pt-3 border-t border-gray-100">
                                 <div class="mb-3 flex items-baseline justify-between">
                                     <span class="text-xs font-semibold text-gray-500">Precio:</span>
-                                    <span class="text-2xl sm:text-3xl font-extrabold text-gray-900">$20.000</span>
+                                    <span class="text-2xl font-extrabold text-gray-900">$20.000</span>
                                 </div>
 
                                 <div class="flex items-center gap-2">
-                                    <!-- Qty -->
                                     <div class="flex items-center border border-gray-300 rounded-lg bg-gray-50 overflow-hidden">
-                                        <button onclick="decrementQty('qty-p2')" class="px-2.5 py-2 text-gray-600 hover:bg-gray-200 font-bold text-sm">-</button>
-                                        <input type="number" id="qty-p2" value="1" min="1" max="99" class="w-10 text-center bg-transparent font-bold text-gray-900 text-xs focus:outline-none">
-                                        <button onclick="incrementQty('qty-p2')" class="px-2.5 py-2 text-gray-600 hover:bg-gray-200 font-bold text-sm">+</button>
+                                        <button onclick="decrementQty('qty-p2')" class="px-2 py-1.5 text-gray-600 hover:bg-gray-200 font-bold text-sm">-</button>
+                                        <input type="number" id="qty-p2" value="1" min="1" max="99" class="w-8 text-center bg-transparent font-bold text-gray-900 text-xs focus:outline-none">
+                                        <button onclick="incrementQty('qty-p2')" class="px-2 py-1.5 text-gray-600 hover:bg-gray-200 font-bold text-sm">+</button>
                                     </div>
-                                    <!-- Add button -->
-                                    <button onclick="addToCart(2, 'Pistachos Tostados y Salados (400g Bolsa Doypack)', 20000, 'qty-p2', 'pistachos-400g-doypack.png')" class="flex-grow bg-brand-green hover:bg-brand-greenDark text-white font-bold py-2.5 px-3 rounded-lg text-xs sm:text-sm transition flex items-center justify-center gap-2 shadow-xs active:scale-98">
-                                        <i class="fa-solid fa-cart-plus"></i> Agregar al Carrito
+                                    <button onclick="addToCart(2, 'Pistachos Tostados y Salados (400g Bolsa Doypack)', 20000, 'qty-p2', 'pistachos-400g-doypack.png')" class="flex-grow bg-brand-green hover:bg-brand-greenDark text-white font-bold py-2.5 px-3 rounded-lg text-xs transition flex items-center justify-center gap-1.5 shadow-xs active:scale-98">
+                                        <i class="fa-solid fa-cart-plus"></i> Agregar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- PRODUCTO 3: 5kg Presentación Familiar / Mayor (CONSULTAR PRECIO) -->
+                    <article class="store-card bg-white rounded-2xl border border-gray-200 overflow-hidden flex flex-col justify-between shadow-xs">
+                        <div class="p-6 bg-white flex flex-col items-center justify-center border-b border-gray-100 relative min-h-[260px]">
+                            <span class="absolute top-3 left-3 bg-gray-900 text-white text-[11px] font-bold px-2.5 py-1 rounded-md">
+                                Bolsa 5 Kg
+                            </span>
+                            <span class="absolute top-3 right-3 bg-amber-100 text-amber-800 text-[11px] font-bold px-2 py-0.5 rounded">
+                                Gran Formato
+                            </span>
+                            <img src="pistachos-con-cascara.jpg" alt="Pistachos 5kg Rosario" class="h-44 sm:h-48 object-cover rounded-xl shadow-xs" onerror="this.src='images/pistachos-con-cascara.jpg'">
+                        </div>
+
+                        <div class="p-5 space-y-4 flex-grow flex flex-col justify-between">
+                            <div>
+                                <span class="text-[11px] font-bold text-brand-green uppercase tracking-wider">9Q Frutos Secos</span>
+                                <h4 class="font-bold text-gray-900 text-base sm:text-lg mt-0.5 leading-snug">
+                                    Pistachos Tostados y Salados - 5 Kg
+                                </h4>
+                                <p class="text-gray-500 text-xs mt-1.5 leading-relaxed">
+                                    Presentación en bolsa/bulto de 5kg para familias o consumo intensivo.
+                                </p>
+                            </div>
+
+                            <div class="pt-3 border-t border-gray-100">
+                                <div class="mb-3 flex items-baseline justify-between">
+                                    <span class="text-xs font-semibold text-gray-500">Precio:</span>
+                                    <span class="text-base sm:text-lg font-extrabold text-brand-greenDark">Consultar por WhatsApp</span>
+                                </div>
+
+                                <div class="flex items-center gap-2">
+                                    <div class="flex items-center border border-gray-300 rounded-lg bg-gray-50 overflow-hidden">
+                                        <button onclick="decrementQty('qty-p3')" class="px-2 py-1.5 text-gray-600 hover:bg-gray-200 font-bold text-sm">-</button>
+                                        <input type="number" id="qty-p3" value="1" min="1" max="99" class="w-8 text-center bg-transparent font-bold text-gray-900 text-xs focus:outline-none">
+                                        <button onclick="incrementQty('qty-p3')" class="px-2 py-1.5 text-gray-600 hover:bg-gray-200 font-bold text-sm">+</button>
+                                    </div>
+                                    <button onclick="addToCart(3, 'Pistachos Tostados y Salados (Bolsa 5 Kg)', 0, 'qty-p3', 'pistachos-con-cascara.jpg', true)" class="flex-grow bg-stone-900 hover:bg-brand-green text-white font-bold py-2.5 px-3 rounded-lg text-xs transition flex items-center justify-center gap-1.5 shadow-xs active:scale-98">
+                                        <i class="fa-solid fa-cart-plus"></i> Sumar al Carrito
                                     </button>
                                 </div>
                             </div>
@@ -272,7 +317,7 @@
                     <div class="space-y-2">
                         <div class="w-10 h-10 rounded-full bg-brand-green text-white font-bold flex items-center justify-center mx-auto text-sm">1</div>
                         <h5 class="font-bold text-gray-900 text-xs sm:text-sm">Elegí tus productos</h5>
-                        <p class="text-xs text-gray-500">Seleccioná la presentación (180g o 400g) y sumala a tu carrito.</p>
+                        <p class="text-xs text-gray-500">Seleccioná la presentación (180g, 400g o 5kg) y sumala a tu carrito.</p>
                     </div>
                     <div class="space-y-2">
                         <div class="w-10 h-10 rounded-full bg-brand-green text-white font-bold flex items-center justify-center mx-auto text-sm">2</div>
@@ -305,7 +350,7 @@
                         Venta Mayorista Directa
                     </h2>
                     <p class="text-emerald-100 text-xs sm:text-sm leading-relaxed">
-                        Abastecemos a dietéticas, confiterías, heladerías y revendedores de todo el país. Los precios varían según volumen y cotización de bulto cerrado.
+                        Abastecemos a dietéticas, confiterías, heladerías, revendedores y distribuidores de todo el país. Cotizaciones directas de productor según volumen.
                     </p>
                 </div>
 
@@ -319,7 +364,7 @@
             <div>
                 <div class="border-b border-gray-200 pb-3 mb-6">
                     <h3 class="font-extrabold text-xl text-gray-900">Variedades Mayoristas Disponibles</h3>
-                    <p class="text-xs text-gray-500 mt-0.5">Presentaciones por bulto cerrado (5kg, 10kg, 25kg y a granel)</p>
+                    <p class="text-xs text-gray-500 mt-0.5">Presentaciones por bulto cerrado y a granel</p>
                 </div>
 
                 <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -342,18 +387,18 @@
                         </div>
                     </article>
 
-                    <!-- 2. Pistachos sin cáscara -->
+                    <!-- 2. Pistachos sin cáscara (pepa) -->
                     <article class="store-card bg-white rounded-2xl border border-gray-200 overflow-hidden flex flex-col justify-between shadow-xs">
                         <div class="p-4 bg-gray-50 h-44 flex items-center justify-center border-b border-gray-100">
-                            <img src="pistachos_sin_cascara.jpeg" alt="Pistachos pelados sin cáscara" class="h-full w-full object-cover rounded-lg" onerror="this.src='images/pistachos_sin_cascara.jpeg'">
+                            <img src="pistachos-pepa.png" alt="Pistachos pepa pelados sin cáscara" class="h-full w-full object-cover rounded-lg" onerror="this.src='images/pistachos_sin_cascara.jpeg'">
                         </div>
                         <div class="p-4 space-y-3 flex-grow flex flex-col justify-between">
                             <div>
-                                <h4 class="font-bold text-gray-900 text-base">Pistachos Sin Cáscara</h4>
-                                <p class="text-xs text-gray-500 mt-1">Pelados enteros de máxima pureza. Muy demandado para gastronomía y repostería.</p>
+                                <h4 class="font-bold text-gray-900 text-base">Pistachos Sin Cáscara (Pepa)</h4>
+                                <p class="text-xs text-gray-500 mt-1">Pelados enteros de máxima pureza. Muy demandado para heladerías y confiterías.</p>
                             </div>
                             <div class="pt-2 border-t border-gray-100">
-                                <a href="https://wa.me/542477368842?text=Hola,%20quisiera%20cotizar%20por%20mayor:%20Pistachos%20sin%20c%C3%A1scara%20(pelados)" target="_blank" class="w-full bg-brand-green hover:bg-brand-greenDark text-white text-xs font-bold py-2 px-3 rounded-lg transition flex items-center justify-center gap-1.5">
+                                <a href="https://wa.me/542477368842?text=Hola,%20quisiera%20cotizar%20por%20mayor:%20Pistachos%20sin%20c%C3%A1scara%20(pepa)" target="_blank" class="w-full bg-brand-green hover:bg-brand-greenDark text-white text-xs font-bold py-2 px-3 rounded-lg transition flex items-center justify-center gap-1.5">
                                     <i class="fa-brands fa-whatsapp"></i> Cotizar
                                 </a>
                             </div>
@@ -551,8 +596,10 @@
             const navMayorista = document.getElementById('nav-btn-mayorista');
             const mobMinorista = document.getElementById('mob-nav-btn-minorista');
             const mobMayorista = document.getElementById('mob-nav-btn-mayorista');
+            const heroSection = document.getElementById('hero-banner-section');
             const heroTitle = document.getElementById('hero-title');
             const heroSubtitle = document.getElementById('hero-subtitle');
+            const heroBadge = document.getElementById('hero-badge');
 
             if (tab === 'minorista') {
                 secMinorista.classList.remove('hidden');
@@ -562,6 +609,11 @@
                 navMayorista.classList.remove('active');
                 mobMinorista.classList.add('active');
                 mobMayorista.classList.remove('active');
+
+                heroSection.className = "hero-minorista-bg py-10 sm:py-14 border-b border-gray-200 transition-all duration-300";
+                heroTitle.className = "text-2xl sm:text-4xl font-extrabold text-gray-900 tracking-tight leading-tight";
+                heroSubtitle.className = "text-gray-700 text-sm sm:text-base max-w-xl mx-auto font-medium";
+                heroBadge.className = "inline-flex items-center gap-1.5 bg-white/95 backdrop-blur-xs border border-brand-greenBorder text-brand-green px-3.5 py-1 rounded-full text-xs font-bold shadow-xs";
 
                 heroTitle.innerText = "Pistachos Tostados y Salados de Calidad Premium";
                 heroSubtitle.innerText = "Elegí tus productos, sumalos al carrito y recibilos en tu casa en Rosario coordinando tu entrega directa por WhatsApp.";
@@ -575,6 +627,11 @@
                 navMinorista.classList.remove('active');
                 mobMayorista.classList.add('active');
                 mobMinorista.classList.remove('active');
+
+                heroSection.className = "hero-mayorista-bg py-10 sm:py-14 border-b border-gray-800 text-white transition-all duration-300";
+                heroTitle.className = "text-2xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight";
+                heroSubtitle.className = "text-emerald-100 text-sm sm:text-base max-w-xl mx-auto font-medium";
+                heroBadge.className = "inline-flex items-center gap-1.5 bg-brand-green/80 backdrop-blur-xs border border-emerald-400/40 text-white px-3.5 py-1 rounded-full text-xs font-bold shadow-xs";
 
                 heroTitle.innerText = "Venta Mayorista de Frutos Secos a Todo el País";
                 heroSubtitle.innerText = "Precios directos de productor por bulto cerrado para dietéticas, comercios y distribuidores.";
@@ -597,7 +654,7 @@
             }
         }
 
-        function addToCart(id, name, price, qtyInputId, image) {
+        function addToCart(id, name, price, qtyInputId, image, isCustomQuote = false) {
             const qtyInput = document.getElementById(qtyInputId);
             const quantity = parseInt(qtyInput.value) || 1;
 
@@ -605,7 +662,7 @@
             if (existingIndex > -1) {
                 cart[existingIndex].quantity += quantity;
             } else {
-                cart.push({ id, name, price, quantity, image });
+                cart.push({ id, name, price, quantity, image, isCustomQuote });
             }
 
             qtyInput.value = 1;
@@ -647,11 +704,20 @@
             const totalAmountEl = document.getElementById('cart-total-amount');
 
             const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-            const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            const fixedPricedItems = cart.filter(item => !item.isCustomQuote);
+            const customQuoteItems = cart.filter(item => item.isCustomQuote);
+            const totalPrice = fixedPricedItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
 
             badge.innerText = totalItems;
             floatingCount.innerText = totalItems;
-            floatingTotal.innerText = `$${totalPrice.toLocaleString('es-AR')}`;
+            
+            if (customQuoteItems.length > 0 && totalPrice === 0) {
+                floatingTotal.innerText = 'A cotizar';
+            } else if (customQuoteItems.length > 0) {
+                floatingTotal.innerText = `$${totalPrice.toLocaleString('es-AR')} + cotiz.`;
+            } else {
+                floatingTotal.innerText = `$${totalPrice.toLocaleString('es-AR')}`;
+            }
 
             if (cart.length === 0) {
                 container.innerHTML = '';
@@ -669,7 +735,9 @@
                         <img src="${item.image}" alt="${item.name}" class="w-12 h-12 object-contain bg-white rounded-lg p-1 border border-gray-200 flex-shrink-0" onerror="this.src='images/${item.image}'">
                         <div class="flex-grow min-w-0">
                             <h5 class="font-bold text-gray-900 text-xs truncate">${item.name}</h5>
-                            <div class="text-[11px] text-gray-500 font-semibold">$${item.price.toLocaleString('es-AR')} c/u</div>
+                            <div class="text-[11px] text-gray-500 font-semibold">
+                                ${item.isCustomQuote ? '<span class="text-brand-green font-bold">Precio a cotizar por WhatsApp</span>' : `$${item.price.toLocaleString('es-AR')} c/u`}
+                            </div>
                             <div class="flex items-center gap-1.5 mt-1.5">
                                 <button onclick="updateCartItemQty(${item.id}, -1)" class="w-5 h-5 rounded bg-white border border-gray-300 text-gray-700 flex items-center justify-center font-bold text-xs hover:bg-gray-100">-</button>
                                 <span class="text-xs font-bold text-gray-900 w-4 text-center">${item.quantity}</span>
@@ -680,12 +748,20 @@
                             <button onclick="removeCartItem(${item.id})" class="text-gray-400 hover:text-red-500 text-xs">
                                 <i class="fa-solid fa-trash-can"></i>
                             </button>
-                            <span class="font-bold text-gray-900 text-xs">$${(item.price * item.quantity).toLocaleString('es-AR')}</span>
+                            <span class="font-bold text-gray-900 text-xs">
+                                ${item.isCustomQuote ? '<span class="text-brand-green">A cotizar</span>' : `$${(item.price * item.quantity).toLocaleString('es-AR')}`}
+                            </span>
                         </div>
                     </div>
                 `).join('');
 
-                totalAmountEl.innerText = `$${totalPrice.toLocaleString('es-AR')}`;
+                if (customQuoteItems.length > 0 && totalPrice === 0) {
+                    totalAmountEl.innerText = `A cotizar`;
+                } else if (customQuoteItems.length > 0) {
+                    totalAmountEl.innerText = `$${totalPrice.toLocaleString('es-AR')} (+ 5kg a cotizar)`;
+                } else {
+                    totalAmountEl.innerText = `$${totalPrice.toLocaleString('es-AR')}`;
+                }
             }
         }
 
@@ -722,13 +798,26 @@
             message += `📦 *DETALLE DEL PEDIDO:*\n`;
 
             let totalPrice = 0;
+            let hasCustomQuote = false;
+
             cart.forEach(item => {
-                const subtotal = item.price * item.quantity;
-                totalPrice += subtotal;
-                message += `• ${item.quantity}x ${item.name} - $${subtotal.toLocaleString('es-AR')}\n`;
+                if (item.isCustomQuote) {
+                    hasCustomQuote = true;
+                    message += `• ${item.quantity}x ${item.name} - *(Precio a cotizar)*\n`;
+                } else {
+                    const subtotal = item.price * item.quantity;
+                    totalPrice += subtotal;
+                    message += `• ${item.quantity}x ${item.name} - $${subtotal.toLocaleString('es-AR')}\n`;
+                }
             });
 
-            message += `\n💰 *TOTAL: $${totalPrice.toLocaleString('es-AR')}*\n`;
+            if (hasCustomQuote && totalPrice === 0) {
+                message += `\n💰 *TOTAL:* A cotizar según stock/volumen\n`;
+            } else if (hasCustomQuote) {
+                message += `\n💰 *SUBTOTAL FIJO:* $${totalPrice.toLocaleString('es-AR')} (+ cotización de presentación 5kg)\n`;
+            } else {
+                message += `\n💰 *TOTAL: $${totalPrice.toLocaleString('es-AR')}*\n`;
+            }
             
             if (name) message += `👤 *Nombre:* ${name}\n`;
             if (address) message += `📍 *Dirección (Rosario):* ${address}\n`;
