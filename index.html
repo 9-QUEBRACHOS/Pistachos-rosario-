@@ -66,7 +66,7 @@
             border-color: #2d7a36;
         }
         .hero-minorista-bg {
-            background: linear-gradient(rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.94)), url('bg-pistachos-cascara.png') center/cover;
+            background: linear-gradient(rgba(255, 255, 255, 0.60), rgba(255, 255, 255, 0.72)), url('bg-pistachos-cascara.png') center/cover;
         }
         .hero-mayorista-bg {
             background: linear-gradient(rgba(24, 70, 30, 0.85), rgba(15, 45, 20, 0.90)), url('bg-campo-pistachos.png') center/cover;
@@ -132,16 +132,18 @@
 
     <!-- STORE BANNER (WITH SUBTLE TEXTURED BACKGROUND) -->
     <section id="hero-banner-section" class="hero-minorista-bg py-10 sm:py-14 border-b border-gray-200 transition-all duration-300">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center space-y-3.5">
-            <span id="hero-badge" class="inline-flex items-center gap-1.5 bg-white/95 backdrop-blur-xs border border-brand-greenBorder text-brand-green px-3.5 py-1 rounded-full text-xs font-bold shadow-xs">
-                <i class="fa-solid fa-circle-check text-brand-green"></i> 100% Calidad Argentina · Cosecha Seleccionada
-            </span>
-            <h1 id="hero-title" class="text-2xl sm:text-4xl font-extrabold text-gray-900 tracking-tight leading-tight">
-                Pistachos Tostados y Salados de Calidad Premium
-            </h1>
-            <p id="hero-subtitle" class="text-gray-700 text-sm sm:text-base max-w-xl mx-auto font-medium">
-                Elegí tus productos, sumalos al carrito y recibilos en tu casa en Rosario coordinando tu entrega directa por WhatsApp.
-            </p>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <div id="hero-card-container" class="bg-white/85 backdrop-blur-md p-6 sm:p-8 rounded-2xl border border-white/90 shadow-sm text-center space-y-3.5">
+                <span id="hero-badge" class="inline-flex items-center gap-1.5 bg-white border border-brand-greenBorder text-brand-green px-3.5 py-1 rounded-full text-xs font-bold shadow-xs">
+                    <i class="fa-solid fa-circle-check text-brand-green"></i> 100% Calidad Argentina · Cosecha Seleccionada
+                </span>
+                <h1 id="hero-title" class="text-2xl sm:text-4xl font-extrabold text-gray-900 tracking-tight leading-tight">
+                    Pistachos Tostados y Salados de Calidad Premium
+                </h1>
+                <p id="hero-subtitle" class="text-gray-700 text-sm sm:text-base max-w-xl mx-auto font-medium">
+                    Elegí tus productos, sumalos al carrito y recibilos en tu casa en Rosario coordinando tu entrega directa por WhatsApp.
+                </p>
+            </div>
         </div>
     </section>
 
@@ -350,7 +352,7 @@
                         Venta Mayorista Directa
                     </h2>
                     <p class="text-emerald-100 text-xs sm:text-sm leading-relaxed">
-                        Abastecemos a dietéticas, confiterías, heladerías, revendedores y distribuidores de todo el país. Cotizaciones directas de productor según volumen.
+                        Abastecemos a industrias, grandes comercios y distribuidores de todo el país. Cotizaciones directas de productor por bulto cerrado según volumen.
                     </p>
                 </div>
 
@@ -601,6 +603,8 @@
             const heroSubtitle = document.getElementById('hero-subtitle');
             const heroBadge = document.getElementById('hero-badge');
 
+            const heroCard = document.getElementById('hero-card-container');
+
             if (tab === 'minorista') {
                 secMinorista.classList.remove('hidden');
                 secMayorista.classList.add('hidden');
@@ -611,9 +615,10 @@
                 mobMayorista.classList.remove('active');
 
                 heroSection.className = "hero-minorista-bg py-10 sm:py-14 border-b border-gray-200 transition-all duration-300";
+                if (heroCard) heroCard.className = "bg-white/85 backdrop-blur-md p-6 sm:p-8 rounded-2xl border border-white/90 shadow-sm text-center space-y-3.5";
                 heroTitle.className = "text-2xl sm:text-4xl font-extrabold text-gray-900 tracking-tight leading-tight";
                 heroSubtitle.className = "text-gray-700 text-sm sm:text-base max-w-xl mx-auto font-medium";
-                heroBadge.className = "inline-flex items-center gap-1.5 bg-white/95 backdrop-blur-xs border border-brand-greenBorder text-brand-green px-3.5 py-1 rounded-full text-xs font-bold shadow-xs";
+                heroBadge.className = "inline-flex items-center gap-1.5 bg-white border border-brand-greenBorder text-brand-green px-3.5 py-1 rounded-full text-xs font-bold shadow-xs";
 
                 heroTitle.innerText = "Pistachos Tostados y Salados de Calidad Premium";
                 heroSubtitle.innerText = "Elegí tus productos, sumalos al carrito y recibilos en tu casa en Rosario coordinando tu entrega directa por WhatsApp.";
@@ -629,12 +634,13 @@
                 mobMinorista.classList.remove('active');
 
                 heroSection.className = "hero-mayorista-bg py-10 sm:py-14 border-b border-gray-800 text-white transition-all duration-300";
+                if (heroCard) heroCard.className = "bg-stone-900/40 backdrop-blur-md p-6 sm:p-8 rounded-2xl border border-white/20 shadow-sm text-center space-y-3.5";
                 heroTitle.className = "text-2xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight";
                 heroSubtitle.className = "text-emerald-100 text-sm sm:text-base max-w-xl mx-auto font-medium";
                 heroBadge.className = "inline-flex items-center gap-1.5 bg-brand-green/80 backdrop-blur-xs border border-emerald-400/40 text-white px-3.5 py-1 rounded-full text-xs font-bold shadow-xs";
 
                 heroTitle.innerText = "Venta Mayorista de Frutos Secos a Todo el País";
-                heroSubtitle.innerText = "Precios directos de productor por bulto cerrado para dietéticas, comercios y distribuidores.";
+                heroSubtitle.innerText = "Precios directos de productor por bulto cerrado para industrias, grandes comercios y distribuidores.";
 
                 history.replaceState(null, null, '#mayorista');
             }
